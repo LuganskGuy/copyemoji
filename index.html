@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Копирование эмодзи</title>
+    <style>
+        .emoji {
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function copyEmoji(emoji) {
+            const el = document.createElement('textarea');
+            el.value = emoji.innerText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Эмодзи скопирован в буфер обмена!');
+        }
+    </script>
+</head>
+<body>
+    <h1>Копирование эмодзи</h1>
+    <p>Нажмите на эмодзи, чтобы скопировать его в буфер обмена.</p>
+    <div class="emoji" onclick="copyEmoji(this)">😀</div>
+    <div class="emoji" onclick="copyEmoji(this)">😃</div>
+    <div class="emoji" onclick="copyEmoji(this)">😄</div>
+    <div class="emoji" onclick="copyEmoji(this)">😁</div>
+    <div class="emoji" onclick="copyEmoji(this)">👍</div>
+    <div class="emoji" onclick="copyEmoji(this)">👎</div>
+    <div class="emoji" onclick="copyEmoji(this)">👏</div>
+    <div class="emoji" onclick="copyEmoji(this)">🤝</div>
+    <div class="emoji" onclick="copyEmoji(this)">🔥</div>
+    <div class="emoji" onclick="copyEmoji(this)">💯</div>
+    <!-- Добавьте другие эмодзи по вашему выбору -->
+</body>
+</html>

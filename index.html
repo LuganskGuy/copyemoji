@@ -2,24 +2,8 @@
 <html>
 <head>
     <title>Копирование эмодзи</title>
-    <style>
-        .emoji {
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-    </style>
-    <script>
-        function copyEmoji(emoji) {
-            const el = document.createElement('textarea');
-            el.value = emoji.innerText;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            alert('Эмодзи скопирован в буфер обмена!');
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Копирование эмодзи</h1>
